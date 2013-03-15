@@ -4,6 +4,7 @@
  */
 package ch.comem.services;
 
+import ch.comem.models.Application;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -23,7 +24,17 @@ public class ApplicationsManager implements ApplicationsManagerLocal {
 
     @Override
     public Long createApplication(String name, String description, String apiKey, String apiSecret) {
-        return null;
+        Application application = new Application();
+        
+        application.setName(name);
+        application.setDescription(description);
+        application.setApiKey(apiKey);
+        application.setApiSecret(apiSecret);
+        
+        em.persist(application);
+        em.flush();
+        
+        return application.getId();
     }
 
 }
