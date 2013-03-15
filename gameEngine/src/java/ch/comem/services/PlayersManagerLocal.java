@@ -16,5 +16,6 @@ public interface PlayersManagerLocal {
     Long createPlayer(String firsName, String lastName, String email, int numberOfPoints);
 
     Long addBadge(int badgeId, int playerId);
+
     
 }

@@ -51,9 +51,10 @@ public class PlayersManager implements PlayersManagerLocal {
         player.addBadge(badge);
         em.flush();
         
-        return null;
+        return player.getId();
     }
 
+    
 
 
 }

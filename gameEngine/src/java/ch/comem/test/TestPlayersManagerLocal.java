@@ -16,5 +16,6 @@ public interface TestPlayersManagerLocal {
     void addPlayer(String firstName);
 
     void addBadgeToPlayer(int idPlayer, int idBadge);
+
     
 }
