@@ -13,6 +13,6 @@ import javax.ejb.Local;
 @Local
 public interface PlayersManagerLocal {
 
-    void createPlayer(String firsName, String lastName, String email, int numberOfPoints, String badges);
+    Long createPlayer(String firsName, String lastName, String email, int numberOfPoints);
     
 }

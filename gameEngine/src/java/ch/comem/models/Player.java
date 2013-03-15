@@ -5,7 +5,7 @@
 package ch.comem.models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -26,18 +26,18 @@ public class Player implements Serializable {
     private String lastName;
     private String email;
     private int numberOfPoints;
-    private ArrayList<String> badges;
-    
-    public String getFirstName() {
-        return firstName;
-    }
+    private List<Badge> badges;
 
-    public ArrayList<String> getBadges() {
+    public List<Badge> getBadges() {
         return badges;
     }
 
-    public void setBadges(ArrayList<String> badges) {
+    public void setBadges(List<Badge> badges) {
         this.badges = badges;
+    }
+    
+    public String getFirstName() {
+        return firstName;
     }
 
     public void setFirstName(String firstName) {
