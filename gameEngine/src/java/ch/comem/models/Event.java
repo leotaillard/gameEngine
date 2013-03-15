@@ -5,62 +5,22 @@
 package ch.comem.models;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Collection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 
 /**
  *
  * @author Leo
  */
 @Entity
-public class Player implements Serializable {
+public class Event implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
-    private String firstName;
-    private String lastName;
-    private String email;
-    private int numberOfPoints;
-    
-    
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getNumberOfPoints() {
-        return numberOfPoints;
-    }
-
-    public void setNumberOfPoints(int numberOfPoints) {
-        this.numberOfPoints = numberOfPoints;
-    }
     
     public Long getId() {
         return id;
@@ -80,10 +40,10 @@ public class Player implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Player)) {
+        if (!(object instanceof Event)) {
             return false;
         }
-        Player other = (Player) object;
+        Event other = (Event) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -92,7 +52,7 @@ public class Player implements Serializable {
 
     @Override
     public String toString() {
-        return "ch.comem.models.Player[ id=" + id + " ]";
+        return "ch.comem.models.Event[ id=" + id + " ]";
     }
     
 }
