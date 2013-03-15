@@ -7,12 +7,14 @@ package ch.comem.test;
 import ch.comem.services.ApplicationsManagerLocal;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
+import javax.jws.WebService;
 
 /**
  *
  * @author Leo
  */
 @Stateless
+@WebService
 public class TestApplicationsManager implements TestApplicationsManagerLocal {
     @EJB
     private ApplicationsManagerLocal applicationsManager;

@@ -5,11 +5,11 @@
 package ch.comem.models;
 
 import java.io.Serializable;
+import java.sql.Timestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 /**
  *
@@ -21,6 +21,11 @@ public class Event implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    
+    private Application application;
+    private Player player;
+    private String type;
+    private Timestamp timestamp;
     
     public Long getId() {
         return id;
