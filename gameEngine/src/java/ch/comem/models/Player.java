@@ -15,35 +15,20 @@ import javax.persistence.Id;
  * @author Leo
  */
 @Entity
-public class Badge implements Serializable {
+public class Player implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private String title;
-    private String description;
     
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+    private String firstName;
+    private String lastName;
     
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
     
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -58,10 +43,10 @@ public class Badge implements Serializable {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Badge)) {
+        if (!(object instanceof Player)) {
             return false;
         }
-        Badge other = (Badge) object;
+        Player other = (Player) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -70,7 +55,7 @@ public class Badge implements Serializable {
 
     @Override
     public String toString() {
-        return "ch.comem.models.badge[ id=" + id + " ]";
+        return "ch.comem.models.Player[ id=" + id + " ]";
     }
     
 }
