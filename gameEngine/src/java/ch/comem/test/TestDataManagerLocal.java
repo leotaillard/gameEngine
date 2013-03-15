@@ -14,5 +14,6 @@ import javax.ejb.Local;
 public interface TestDataManagerLocal {
 
     void test(String generateTestData);
+
     
 }

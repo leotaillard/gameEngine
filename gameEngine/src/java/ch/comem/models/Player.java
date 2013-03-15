@@ -31,10 +31,17 @@ public class Player implements Serializable {
     @ManyToMany
     private List<Badge> badges = new LinkedList<Badge>();
 
+    public void addBadge(Badge badge){
+        
+        if(!getBadges().contains(badge)){
+            getBadges().add(badge);
+        }
+        
+    }
     public List<Badge> getBadges() {
         return badges;
     }
-
+    
     public void setBadges(List<Badge> badges) {
         this.badges = badges;
     }

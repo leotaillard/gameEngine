@@ -31,4 +31,11 @@ public class TestPlayersManager implements TestPlayersManagerLocal {
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
+    @Override
+    public void addBadgeToPlayer(int idPlayer, int idBadge) {
+        
+        playersManager.addBadge(idPlayer, idBadge);
+        
+    }
+
 }
