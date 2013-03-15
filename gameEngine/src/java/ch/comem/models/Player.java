@@ -32,6 +32,14 @@ public class Player implements Serializable {
         return firstName;
     }
 
+    public ArrayList<String> getBadges() {
+        return badges;
+    }
+
+    public void setBadges(ArrayList<String> badges) {
+        this.badges = badges;
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }

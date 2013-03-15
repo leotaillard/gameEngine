@@ -13,6 +13,10 @@ import javax.ejb.Stateless;
 @Stateless
 public class PlayersManager implements PlayersManagerLocal {
 
+    @Override
+    public void createPlayer(String firsName, String lastName, String email, int numberOfPoints, String badges) {
+    }
+
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
