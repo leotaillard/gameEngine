@@ -5,11 +5,13 @@
 package ch.comem.models;
 
 import java.io.Serializable;
+import java.util.LinkedList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 /**
  *
@@ -26,7 +28,8 @@ public class Player implements Serializable {
     private String lastName;
     private String email;
     private int numberOfPoints;
-    private List<Badge> badges;
+    @ManyToMany
+    private List<Badge> badges = new LinkedList<Badge>();
 
     public List<Badge> getBadges() {
         return badges;
