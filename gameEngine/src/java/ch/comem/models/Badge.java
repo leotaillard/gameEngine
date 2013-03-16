@@ -25,15 +25,6 @@ public class Badge implements Serializable {
     private Long id;
 
     private String title;
-
-    public String getSurName() {
-        return surName;
-    }
-
-    public void setSurName(String surName) {
-        this.surName = surName;
-    }
-    private String surName;
     private String description;
     private String icon;
     @ManyToMany(mappedBy = "badges")
